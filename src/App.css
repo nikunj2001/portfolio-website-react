@@ -1,38 +1,365 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  background: #1f2235;
+  z-index: 1;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.navbar__container {
   display: flex;
-  flex-direction: column;
+  height: 100px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.navbar__left-logo img {
+  width: 110px;
+}
+.navbar__right {
+  display: flex;
+  list-style-type: none;
+}
+.navbar__right li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+.col-6 {
+  width: 50%;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.header__ul {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 25px;
+}
+.header__ul li {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ff4a57;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.header__ul li:first-child {
+  margin-left: 0;
+}
+.header__section h1 {
+  font-size: 57px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.header__section p {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+.btn {
+  outline: none;
+  border: none;
+  color: white;
+  padding: 13px 40px;
+  text-decoration: none;
+}
+.btn-outline {
+  border: 2px solid #ff4a57;
+  border-radius: 50px;
+}
+.btn-smart {
+  background: #ff4a57;
+  padding: 12px 40px;
+  border-radius: 50px;
+}
+.play {
+  font-size: 15px;
+}
+.banner__img {
+  padding: 0 30px;
+  margin-top: 50px;
+}
+.services {
+  background: #1f2235;
+  padding: 100px 0;
+  color: white;
+}
+.common {
+  width: 33.3333333333333333333%;
+  margin: 0 auto;
+  text-align: center;
+}
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #ff4a57;
+  font-size: 16px;
+}
+.mainHeader {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: white;
+}
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+}
+.commonBorder {
+  background: #ff4a57;
+  height: 3px;
+  width: 100px;
+  margin: 25px auto;
+}
+.col-4 {
+  width: 33.3333333333333333%;
+}
+.row {
+  flex-wrap: wrap;
+}
+.services__box {
+  padding: 40px;
+  margin: 20px;
+  background: #23263a;
+  color: #fff;
+}
+.commonIcons {
+  font-size: 45px;
+  color: #ff4a57;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.services__box-header {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.services__box-p {
+  font-size: 15px;
+  color: #dfdfdf;
+}
+.bgMain {
+  background: #1f2235;
+}
+.about {
+  width: 100%;
+  background: #23263a;
+  padding: 100px 0;
+}
+.about__img {
+  padding: 30px;
+}
+.about__img img {
+  width: 400px;
+}
+.h-650 {
+  height: 650px;
+}
+.alignCenter {
+  align-items: center;
+}
+.about__info {
+  color: white;
+}
+.about__info h1 {
+  margin-bottom: 30px;
+}
+.about__info-p1 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.about__info-p2 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.info__contacts {
+  margin-top: 20px;
+}
+.info__contacts strong {
+  color: #ff4a57;
+}
+.info__contacts p {
+  margin-top: 5px;
+}
+.info__contacts .col-6 {
+  margin: 10px 0;
+}
+.prices {
+  width: 100%;
+  padding: 100px 0;
+  background: #1f2235;
+}
+.price {
+  background: #23263a;
+  padding: 15px;
+
+  border-radius: 8px;
+  margin: 35px 15px;
+  color: #fff;
+  text-align: center;
+}
+.priceHeading {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.price__rs {
+  font-size: 70px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.price__rs span {
+  font-size: 25px;
+}
+.price ul {
+  list-style-type: none;
+}
+.price ul li {
+  margin: 5px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #3c3c3c;
+}
+.price__btn {
+  margin-top: 40px;
+}
+.contact {
+  padding: 100px 0;
+  background: #23263a;
+}
+.justifyCenter {
+  justify-content: center;
+}
+.contactSection-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contactSection-logo img {
+  width: 130px;
+}
+.contactSection p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.aboutCircles {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.aboutCircles li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #1f2235;
+  margin: 0 12px;
+}
+.services__box:hover {
+  background: #ff4a57;
+  transition: all 0.5s linear;
+}
+.services__box:hover .commonIcons {
+  color: #fff;
+}
+.toggle {
+  position: fixed;
+  top: 20px;
+  cursor: pointer;
+  right: 25px;
+  background: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+@media (max-width: 765px) {
+  .container {
+    width: 100%;
+    padding: 0px 50px;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar__right {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #1f2235;
+
+    left: 0;
+  }
+  .navbar__right li a {
+    display: block;
+    font-size: 14px;
+    padding: 15px 0;
+  }
+  .toggle {
+    transition: all 0.5s linear;
+
+    display: flex;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .banner__img img {
+    display: none;
+  }
+  .header__section h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .header__section p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 50px;
+  }
+  .common {
+    width: 100%;
+  }
+  .col-4 {
+    width: 100%;
+  }
+  .h-650 {
+    height: auto;
   }
 }
